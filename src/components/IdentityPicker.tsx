@@ -10,10 +10,7 @@ export default function IdentityPicker() {
     <div className="fixed inset-0 z-50 grid place-items-center bg-love-deep/30 backdrop-blur-sm p-6">
       <div className="card p-8 text-center max-w-md animate-pop">
         <div className="text-5xl mb-2">💞</div>
-        <h2 className="text-2xl text-love-deep mb-1">Who's visiting?</h2>
-        <p className="text-ink-soft text-sm mb-6">
-          So we know whose love notes are whose (and whose turn it is in games).
-        </p>
+        <h2 className="text-2xl text-love-deep mb-4">Who's visiting?</h2>
         <div className="grid grid-cols-2 gap-4">
           {PEOPLE.map((p) => (
             <button
