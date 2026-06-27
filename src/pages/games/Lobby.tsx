@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { hasSupabase } from "../../lib/supabase";
-import { PageHeader, Card } from "../../components/ui";
+import { PageHeader } from "../../components/ui";
 
 const GAMES = [
   { to: "/games/battleship", emoji: "🚢", name: "Battleship", desc: "Aarya's favorite. Sink the fleet.", tone: "from-sea-mist" },
@@ -17,15 +16,6 @@ export default function Lobby() {
         title="Game Room"
         subtitle="Pick a game, share a room code, and play together in real time."
       />
-
-      <Card className="mb-6 bg-gradient-to-br from-rose/40 to-sea-mist/50 text-sm">
-        <strong className="text-love-deep">How it works:</strong> open a game,
-        choose a room code (like <code className="bg-white/60 px-1 rounded">US</code>),
-        and have Aarya enter the same code on her device.{" "}
-        {hasSupabase
-          ? "You're connected through Supabase, so it works across phones and laptops."
-          : "Backend isn't configured yet — for now you can test by opening two browser tabs."}
-      </Card>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {GAMES.map((g) => (
