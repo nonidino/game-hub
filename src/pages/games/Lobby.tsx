@@ -5,8 +5,6 @@ import { PageHeader, Card } from "../../components/ui";
 const GAMES = [
   { to: "/games/battleship", emoji: "🚢", name: "Battleship", desc: "Aarya's favorite. Sink the fleet.", tone: "from-sea-mist" },
   { to: "/games/connect4", emoji: "🔴", name: "Connect 4", desc: "Four in a row to win.", tone: "from-rose/50" },
-  { to: "/games/snakes", emoji: "🐍", name: "Snakes & Ladders", desc: "Roll, climb, slide, race.", tone: "from-sea-mist" },
-  { to: "/games/ludo", emoji: "🎲", name: "Ludo", desc: "Get all four tokens home.", tone: "from-rose/50" },
   { to: "/games/heart", emoji: "❤️", name: "Draw a Perfect Heart", desc: "Whose heart is more perfect?", tone: "from-rose/50" },
   { to: "/games/phrase", emoji: "🔗", name: "Phrase Chain", desc: "Guess the linked-word chain.", tone: "from-sea-mist" },
 ];

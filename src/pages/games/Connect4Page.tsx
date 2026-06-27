@@ -56,7 +56,7 @@ export default function Connect4Page() {
         </p>
       }
     >
-      <div className="mx-auto w-fit rounded-2xl bg-gradient-to-b from-sea-deep to-sea p-2 md:p-3 shadow-xl">
+      <div className="mx-auto w-fit rounded-2xl bg-gradient-to-b from-neutral-900 to-black p-2 md:p-3 shadow-xl">
         <div
           className="grid gap-1.5 md:gap-2"
           style={{ gridTemplateColumns: `repeat(${COLS}, minmax(0, 1fr))` }}

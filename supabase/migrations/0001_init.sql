@@ -48,10 +48,13 @@ create table if not exists public.romcoms (
   id uuid primary key default gen_random_uuid(),
   created_at timestamptz not null default now(),
   title text not null,
+  genre text not null default 'Other',
   status text not null default 'to-watch',
   rating int not null default 0,
   notes text not null default ''
 );
+-- for projects created before the genre column existed:
+alter table public.romcoms add column if not exists genre text not null default 'Other';
 
 -- ---------- Realtime games ----------
 create table if not exists public.rooms (

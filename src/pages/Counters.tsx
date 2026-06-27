@@ -65,11 +65,6 @@ export default function Counters() {
           <span className="text-2xl text-rose-2">·</span>
           <Unit value={t.seconds} label="secs" />
         </div>
-        <div className="mt-4 text-sm text-sea-deep font-semibold">
-          that's {t.totalDays.toLocaleString()} days ·{" "}
-          {t.totalHours.toLocaleString()} hours ·{" "}
-          {t.totalSeconds.toLocaleString()} heartbeats of togetherness 💗
-        </div>
       </Card>
 
       {/* Montheversary */}
