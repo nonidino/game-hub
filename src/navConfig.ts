@@ -35,5 +35,5 @@ export const NAV: NavItem[] = [
   { label: "Date Ideas", path: "/dates", emoji: "✨" },
   { label: "Reasons I Love You", path: "/reasons", emoji: "🫶" },
   { label: "Rom-Com Club", path: "/romcom", emoji: "🍿" },
-  { label: "Chat with AI-Me", path: "/chat", emoji: "🤖" },
+  { label: "Chat with AI-Nauni", path: "/chat", emoji: "🤖" },
 ];

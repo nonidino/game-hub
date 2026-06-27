@@ -26,7 +26,7 @@ const QUICK = [
   { to: "/notes", emoji: "💌", label: "Love Notes" },
   { to: "/timeline", emoji: "📸", label: "Memories" },
   { to: "/reasons", emoji: "🫶", label: "Reasons" },
-  { to: "/chat", emoji: "🤖", label: "Chat with AI-Me" },
+  { to: "/chat", emoji: "🤖", label: "Chat with AI-Nauni" },
 ];
 
 export default function Home() {

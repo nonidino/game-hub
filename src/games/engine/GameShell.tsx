@@ -65,18 +65,44 @@ export function GameLayout<S>({
   onNewGame?: () => void;
   children: ReactNode;
 }) {
-  if (!room.code || !room.data) {
+  if (!room.code) {
     return <JoinForm emoji={emoji} title={title} onJoin={room.join} />;
   }
 
-  const { players } = room.data;
+  const headerBar = (
+    <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
+      <h1 className="text-2xl md:text-3xl text-love-deep flex items-center gap-2">
+        <span>{emoji}</span>
+        {title}
+      </h1>
+      <div className="flex items-center gap-2">
+        <span className="text-xs text-ink-soft">room</span>
+        <span className="font-bold tracking-widest text-sea-deep">{room.code}</span>
+        <button onClick={room.leave} className="btn btn-ghost text-sm ml-1">
+          🚪 Leave room
+        </button>
+      </div>
+    </div>
+  );
+
+  const data = room.data;
+  if (!data) {
+    return (
+      <div>
+        {headerBar}
+        <Card className="text-center text-ink-soft">Connecting to room {room.code}…</Card>
+      </div>
+    );
+  }
+
+  const { players } = data;
   const seatChip = (id: "p1" | "p2", color: string) => {
     const p = players[id];
     const isMe = room.mySeat === id;
     return (
       <div
         className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-bold ${color} ${
-          room.data?.turn === id && !room.data?.winner ? "ring-2 ring-offset-1 ring-ink/30" : ""
+          data.turn === id && !data.winner ? "ring-2 ring-offset-1 ring-ink/30" : ""
         }`}
       >
         <span>{p?.emoji ?? "⬡"}</span>
@@ -88,19 +114,7 @@ export function GameLayout<S>({
 
   return (
     <div>
-      <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
-        <h1 className="text-2xl md:text-3xl text-love-deep flex items-center gap-2">
-          <span>{emoji}</span>
-          {title}
-        </h1>
-        <div className="flex items-center gap-2">
-          <span className="text-xs text-ink-soft">room</span>
-          <span className="font-bold tracking-widest text-sea-deep">{room.code}</span>
-          <button onClick={room.leave} className="text-xs text-ink-soft hover:underline ml-1">
-            leave
-          </button>
-        </div>
-      </div>
+      {headerBar}
 
       <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
         <div className="flex items-center gap-2">

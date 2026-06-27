@@ -8,7 +8,7 @@ export const MONTHEVERSARY_DAY = 15;
 
 // The two people. `key` is stored in localStorage; labels are shown in the UI.
 export const PEOPLE = [
-  { key: "you", label: "Me", emoji: "🧑" },
+  { key: "you", label: "Nauni", emoji: "🧑" },
   { key: "aarya", label: "Aarya", emoji: "👩" },
 ] as const;
 
